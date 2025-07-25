@@ -1,0 +1,17 @@
+spin_manifest_version = 2
+
+[application]
+name = "spin-py"
+version = "0.1.0"
+description = ""
+
+[[trigger.http]]
+route = "/..."
+component = "hello-world"
+
+[component.hello-world]
+source = "build/main.wasm"
+
+[component.hello-world.build]
+command = "uv run componentize-py -w spin-http componentize main -o build/main.wasm"
+watch = ["*.py", "pyproject.toml"]
