@@ -1,17 +1,18 @@
 spin_manifest_version = 2
 
 [application]
-name = "spin-py"
+name = "spin-py-demo"
 version = "0.1.0"
-description = ""
+description = "a demo of a spin wasm app made with uv and python"
+authors = ["Дамјан Георгиевски <gdamjan@gmail.com>"]
 
 [[trigger.http]]
 route = "/..."
-component = "hello-world"
+component = "main"
 
-[component.hello-world]
+[component.main]
 source = "main.wasm"
 
-[component.hello-world.build]
+[component.main]
 command = "uv run --no-editable componentize-py -w spin-http componentize spin_py_demo -o main.wasm"
 watch = ["src/**/*", "pyproject.toml"]
