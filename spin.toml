@@ -13,5 +13,5 @@ component = "hello-world"
 source = "build/main.wasm"
 
 [component.hello-world.build]
-command = "uv run componentize-py -w spin-http componentize main -o build/main.wasm"
-watch = ["*.py", "pyproject.toml"]
+command = "uv run --no-editable componentize-py -w spin-http componentize spin_py_demo -o build/main.wasm"
+watch = ["src/**/*", "pyproject.toml"]

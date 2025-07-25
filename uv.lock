@@ -16,9 +16,9 @@ wheels = [
 ]
 
 [[package]]
-name = "spin-py"
+name = "spin-py-demo"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "componentize-py" },
     { name = "spin-sdk" },
