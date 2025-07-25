@@ -10,8 +10,8 @@ route = "/..."
 component = "hello-world"
 
 [component.hello-world]
-source = "build/main.wasm"
+source = "main.wasm"
 
 [component.hello-world.build]
-command = "uv run --no-editable componentize-py -w spin-http componentize spin_py_demo -o build/main.wasm"
+command = "uv run --no-editable componentize-py -w spin-http componentize spin_py_demo -o main.wasm"
 watch = ["src/**/*", "pyproject.toml"]
